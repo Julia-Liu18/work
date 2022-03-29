@@ -1,4 +1,4 @@
-package com.tym.calculator.Model
+package com.tym.calculator.model
 
-data class OperatorNumber(val num1:Int,val num2:Int)
+data class OperatorNumber(var num1:Int,var num2:Int)
 

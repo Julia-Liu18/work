@@ -1,27 +1,25 @@
-package com.tym.calculator.ViewModel
+package com.tym.calculator.viewmodel
 
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
 import androidx.databinding.ObservableField
-import androidx.lifecycle.ViewModel
-import com.tym.calculator.Model.OperatorNumber
+import com.tym.calculator.model.OperatorNumber
 
-class OperatorViewModel(val opNumber:OperatorNumber){
+class OperatorViewModel(var opNumber:OperatorNumber){
 
-    val info=ObservableField<String>("${Count()}")
+    val info=ObservableField(" ")
+    val input1=ObservableField("${opNumber.num1}")
+    val input2=ObservableField("${opNumber.num2}")
 
-    fun Count(){
-        var num1:Int
-        var num2:Int
-        val start:Int=if(num2<0) num2 else 1
-        val end:Int=if(num2<0) -1 else num2
+    fun count(){
+        opNumber.num1=input1.get().toString().toInt()
+        opNumber.num2=input1.get().toString().toInt()
+        val start:Int=if(opNumber.num2<0) opNumber.num2 else 1
+        val end:Int=if(opNumber.num2<0) -1 else opNumber.num2
         var output=""
-        if(num2==0){
-            output="$num1*0=0"
+        if(opNumber.num2==0){
+            output="$opNumber.num1*0=0"
         }else{
             for(index in start..end){
-                output+="$num1*$index=${num1*index}"
+                output+="${opNumber.num1}*$index=${opNumber.num1*index}\n"
             }
         }
         info.set(output)
