@@ -3,18 +3,17 @@ package com.tym.calculator.ViewModel
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import androidx.databinding.ObservableField
 import androidx.lifecycle.ViewModel
+import com.tym.calculator.Model.OperatorNumber
 
-class OperatorViewModel :ViewModel(){
+class OperatorViewModel(val opNumber:OperatorNumber){
 
-    private lateinit var button: Button
-    private lateinit var tv_result: TextView
-    private lateinit var et_input1: EditText
-    private lateinit var et_input2: EditText
+    val info=ObservableField<String>("${Count()}")
 
     fun Count(){
-        val num1:Int=et_input1.text.toString().toInt()
-        val num2:Int=et_input2.text.toString().toInt()
+        var num1:Int
+        var num2:Int
         val start:Int=if(num2<0) num2 else 1
         val end:Int=if(num2<0) -1 else num2
         var output=""
@@ -25,6 +24,6 @@ class OperatorViewModel :ViewModel(){
                 output+="$num1*$index=${num1*index}"
             }
         }
-        tv_result.text=output
+        info.set(output)
     }
 }
