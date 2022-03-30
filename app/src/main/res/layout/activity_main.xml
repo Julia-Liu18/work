@@ -42,7 +42,7 @@
         android:text="计算"
         tools:layout_editor_absoluteX="271dp"
         tools:layout_editor_absoluteY="264dp"
-        android:onClick="@{()->vm.count()}"/>
+        android:onClick="@{()->vm.count(vm.input1,vm.input2)}"/>
 
     <TextView
         android:id="@+id/tv_result"

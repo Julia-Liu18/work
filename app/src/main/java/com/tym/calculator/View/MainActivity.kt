@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         val opNumber=OperatorNumber(0,0)      //Model
         mViewModel=OperatorViewModel(opNumber)     //ViewModel
+     //   mBinding.num=opNumber
         mBinding.vm=mViewModel    //Binding
 
     }
