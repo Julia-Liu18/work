@@ -2,24 +2,24 @@ package com.tym.calculator.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.databinding.DataBindingUtil
-import com.tym.calculator.model.OperatorNumber
 import com.tym.calculator.R
+import com.tym.calculator.model.OperatorNumber
 import com.tym.calculator.viewmodel.OperatorViewModel
-import com.tym.calculator.databinding.ActivityMainBinding
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var mBinding:ActivityMainBinding
-    lateinit var mViewModel: OperatorViewModel
+    private lateinit var viewModel: OperatorViewModel
+    private lateinit var operatorNumber: OperatorNumber
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        mBinding = DataBindingUtil.setContentView(this, R.layout.activity_main)
-        val opNumber=OperatorNumber(0,0)      //Model
-        mViewModel=OperatorViewModel(opNumber)     //ViewModel
-     //   mBinding.num=opNumber
-        mBinding.vm=mViewModel    //Binding
+        setContentView(R.layout.activity_main)
+        operatorNumber=OperatorNumber(0,0)
+        viewModel= OperatorViewModel(operatorNumber)
 
+        button.setOnClickListener{
+            tv_result.text=viewModel.count(et_input1.text.toString().toInt(),et_input2.text.toString().toInt())
+      }
     }
 }

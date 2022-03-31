@@ -1,19 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".view.MainActivity">
-
-    <data>
-        <variable
-            name="vm"
-            type="com.tym.calculator.viewmodel.OperatorViewModel" />
-    </data>
-
-<LinearLayout
-    android:orientation="vertical"
+    tools:context=".view.MainActivity"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <EditText
         android:id="@+id/et_input1"
@@ -21,7 +13,6 @@
         android:layout_height="35dp"
         android:background="@color/cardview_dark_background"
         android:inputType="number"
-        android:text="@={vm.input1}"
         tools:layout_editor_absoluteX="29dp"
         tools:layout_editor_absoluteY="264dp" />
 
@@ -30,7 +21,6 @@
         android:layout_width="73dp"
         android:layout_height="35dp"
         android:background="@color/cardview_dark_background"
-        android:text="@={vm.input2}"
         tools:layout_editor_absoluteX="155dp"
         tools:layout_editor_absoluteY="264dp"
         android:inputType="number"/>
@@ -41,16 +31,13 @@
         android:layout_height="50dp"
         android:text="计算"
         tools:layout_editor_absoluteX="271dp"
-        tools:layout_editor_absoluteY="264dp"
-        android:onClick="@{()->vm.count(vm.input1,vm.input2)}"/>
+        tools:layout_editor_absoluteY="264dp"/>
 
     <TextView
         android:id="@+id/tv_result"
         android:layout_width="300dp"
         android:layout_height="111dp"
         tools:layout_editor_absoluteX="46dp"
-        tools:layout_editor_absoluteY="107dp"
-        android:text="@{vm.info}"/>
-    </LinearLayout>
+        tools:layout_editor_absoluteY="107dp"/>
 
-</layout>
+</LinearLayout>
