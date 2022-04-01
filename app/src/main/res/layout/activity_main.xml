@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.MainActivity">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/et_input1"
+                android:layout_height="30pt"
+                android:layout_width="30pt"
+                android:layout_weight="1"
+                android:background="@color/teal_200"
+                android:inputType="number"
+                android:layout_marginLeft="2pt"
+                android:layout_marginRight="2pt"/>
+
+            <EditText
+                android:id="@+id/et_input2"
+                android:layout_height="30pt"
+                android:layout_width="30pt"
+                android:layout_weight="1"
+                android:background="@color/teal_200"
+                android:inputType="number"
+                android:layout_marginRight="2pt"/>
+
+            <Button
+                android:id="@+id/bt_equal"
+                android:layout_height="30pt"
+                android:layout_width="30pt"
+                android:layout_weight="1"
+                android:text="="
+                android:layout_marginRight="2pt">
+            </Button>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/bt_add"
+                android:layout_height="30pt"
+                android:layout_width="30pt"
+                android:layout_weight="1"
+                android:text="+"
+                android:layout_marginLeft="2pt"
+                android:layout_marginRight="2pt">
+            </Button>
+
+            <Button
+                android:id="@+id/bt_sub"
+                android:layout_height="30pt"
+                android:layout_width="30pt"
+                android:layout_weight="1"
+                android:text="-"
+                android:layout_marginRight="2pt">
+            </Button>
+
+            <Button
+                android:id="@+id/bt_mul"
+                android:layout_height="30pt"
+                android:layout_width="30pt"
+                android:layout_weight="1"
+                android:text="×"
+                android:layout_marginRight="2pt">
+            </Button>
+
+            <Button
+                android:id="@+id/bt_div"
+                android:layout_height="30pt"
+                android:layout_width="30pt"
+                android:layout_weight="1"
+                android:text="÷"
+                android:layout_marginRight="2pt">
+            </Button>
+
+        </TableRow>
+    </TableLayout>
+
+    <ListView
+        android:id="@+id/lt_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
+
+</LinearLayout>
