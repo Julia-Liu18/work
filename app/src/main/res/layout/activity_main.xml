@@ -7,13 +7,9 @@
     android:orientation="vertical"
     tools:context=".view.MainActivity">
 
-    <TableLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
 
             <EditText
                 android:id="@+id/et_input1"
@@ -42,50 +38,14 @@
                 android:text="计算"
                 android:layout_marginRight="2pt">
             </Button>
-        </TableRow>
+        </LinearLayout>
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"/>
 
-            <Button
-                android:id="@+id/bt_add"
-                android:layout_height="30pt"
-                android:layout_width="30pt"
-                android:layout_weight="1"
-                android:text="+"
-                android:layout_marginLeft="2pt"
-                android:layout_marginRight="2pt">
-            </Button>
-
-            <Button
-                android:id="@+id/bt_sub"
-                android:layout_height="30pt"
-                android:layout_width="30pt"
-                android:layout_weight="1"
-                android:text="-"
-                android:layout_marginRight="2pt">
-            </Button>
-
-            <Button
-                android:id="@+id/bt_mul"
-                android:layout_height="30pt"
-                android:layout_width="30pt"
-                android:layout_weight="1"
-                android:text="×"
-                android:layout_marginRight="2pt">
-            </Button>
-
-            <Button
-                android:id="@+id/bt_div"
-                android:layout_height="30pt"
-                android:layout_width="30pt"
-                android:layout_weight="1"
-                android:text="÷"
-                android:layout_marginRight="2pt">
-            </Button>
-
-        </TableRow>
-    </TableLayout>
+    <include layout="@layout/bottom_navbar"/>
 
 </LinearLayout>

@@ -5,6 +5,7 @@
       <map>
         <entry key="..\:/AndroidProject/MVVM_Calculator/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/AndroidProject/MVVM_Calculator/app/src/main/res/layout/add_fragment.xml" value="0.16666666666666666" />
+        <entry key="..\:/AndroidProject/MVVM_Calculator/app/src/main/res/layout/bottom_navbar.xml" value="0.1" />
         <entry key="..\:/AndroidProject/MVVM_Calculator/app/src/main/res/layout/divide_fragment.xml" value="0.16666666666666666" />
         <entry key="..\:/AndroidProject/MVVM_Calculator/app/src/main/res/layout/multiply_fragment.xml" value="0.1" />
         <entry key="..\:/AndroidProject/MVVM_Calculator/app/src/main/res/layout/result_item.xml" value="0.22" />

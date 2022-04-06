@@ -8,7 +8,7 @@ import android.widget.BaseAdapter
 import com.example.mvvm_calculator.viewmodel.OperatorViewModel
 import kotlinx.android.synthetic.main.result_item.view.*
 
-//Adapter()传入两个参数：1、list:OperatorNumber的列表项集合； 2、context:MainActivity主视图的引用
+//Adapter()传入两个参数：1、list:OperatorViewMdel的列表项集合； 2、context:MainActivity主视图的引用
 class MyAdapter(var list: List<OperatorViewModel>, var context:Context) :BaseAdapter(){
 
     //getView()方法：返回视图，集合里的每一项与xml文件内容的绑定
@@ -24,17 +24,14 @@ class MyAdapter(var list: List<OperatorViewModel>, var context:Context) :BaseAda
         return v
     }
 
-    //返回某一项
     override fun getItem(p0: Int): Any {
         return list[p0]
     }
 
-   //返回项id
     override fun getItemId(p0: Int): Long {
         return p0.toLong()
     }
 
-    //返回集合总数
     override fun getCount(): Int {
        return list.size
     }
