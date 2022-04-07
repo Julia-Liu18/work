@@ -2,7 +2,6 @@ package com.tym.calculator.viewmodel
 
 import com.tym.calculator.model.OperatorNumber
 
-
 class OperatorViewModel(val operatorNumber: OperatorNumber){
 
     fun count(num1:Int,num2:Int):String{

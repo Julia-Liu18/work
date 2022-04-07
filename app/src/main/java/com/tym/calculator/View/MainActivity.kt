@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         viewModel= OperatorViewModel(operatorNumber)
 
         button.setOnClickListener{
-            tv_result.text=viewModel.count(et_input1.text.toString().toInt(),et_input2.text.toString().toInt())
+            tv_result.text="${viewModel.count(et_input1.text.toString().toInt(),et_input2.text.toString().toInt())}"
       }
     }
 }

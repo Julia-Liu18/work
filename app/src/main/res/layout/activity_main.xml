@@ -2,42 +2,50 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".view.MainActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".view.MainActivity">
 
-    <EditText
-        android:id="@+id/et_input1"
-        android:layout_width="73dp"
-        android:layout_height="35dp"
-        android:background="@color/cardview_dark_background"
-        android:inputType="number"
-        tools:layout_editor_absoluteX="29dp"
-        tools:layout_editor_absoluteY="264dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <EditText
-        android:id="@+id/et_input2"
-        android:layout_width="73dp"
-        android:layout_height="35dp"
-        android:background="@color/cardview_dark_background"
-        tools:layout_editor_absoluteX="155dp"
-        tools:layout_editor_absoluteY="264dp"
-        android:inputType="number"/>
+            <EditText
+                android:id="@+id/et_input1"
+                android:layout_height="30pt"
+                android:layout_width="30pt"
+                android:layout_weight="1"
+                android:background="@color/teal_200"
+                android:inputType="number"
+                android:layout_marginLeft="2pt"
+                android:layout_marginRight="2pt"/>
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="75dp"
-        android:layout_height="50dp"
-        android:text="计算"
-        tools:layout_editor_absoluteX="271dp"
-        tools:layout_editor_absoluteY="264dp"/>
+            <EditText
+                android:id="@+id/et_input2"
+                android:layout_height="30pt"
+                android:layout_width="30pt"
+                android:layout_weight="1"
+                android:background="@color/teal_200"
+                android:inputType="number"
+                android:layout_marginRight="2pt"/>
 
-    <TextView
-        android:id="@+id/tv_result"
-        android:layout_width="300dp"
-        android:layout_height="111dp"
-        tools:layout_editor_absoluteX="46dp"
-        tools:layout_editor_absoluteY="107dp"/>
+            <Button
+                android:id="@+id/bt_equal"
+                android:layout_height="30pt"
+                android:layout_width="30pt"
+                android:layout_weight="1"
+                android:text="计算"
+                android:layout_marginRight="2pt">
+            </Button>
+        </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"/>
+
+    <include layout="@layout/bottom_navbar"/>
 
 </LinearLayout>
