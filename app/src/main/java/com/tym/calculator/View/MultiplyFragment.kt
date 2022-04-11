@@ -1,4 +1,4 @@
-package com.example.mvvm_calculator.view
+package com.tym.calculator.view
 
 import android.os.Bundle
 import android.view.LayoutInflater
